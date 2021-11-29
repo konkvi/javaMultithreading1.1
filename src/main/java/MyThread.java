@@ -8,12 +8,12 @@ public class MyThread extends Thread {
         try {
             while(!isInterrupted()) {
                 Thread.sleep(3000);
-                System.out.printf("%s работаю\n", getName());
+                System.out.printf("%s работаю\n", Thread.currentThread().getName());
             }
         } catch (InterruptedException err) {
 
         } finally{
-            System.out.printf("%s завершен\n", getName());
+            System.out.printf("%s завершен\n", Thread.currentThread().getName());
         }
     }
 }
