@@ -1,4 +1,5 @@
 public class MyThread extends Thread {
+    public static final int TIME_TO_SLEEP = 3000;
     public MyThread(ThreadGroup group, String name) {
         super(group, name);
     }
@@ -7,7 +8,7 @@ public class MyThread extends Thread {
     public void run() {
         try {
             while(!isInterrupted()) {
-                Thread.sleep(3000);
+                Thread.sleep(TIME_TO_SLEEP);
                 System.out.printf("%s работаю\n", Thread.currentThread().getName());
             }
         } catch (InterruptedException err) {
